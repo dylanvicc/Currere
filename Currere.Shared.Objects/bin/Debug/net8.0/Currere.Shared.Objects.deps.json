@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "Currere.Shared.Objects/1.0.0": {
+        "runtime": {
+          "Currere.Shared.Objects.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Currere.Shared.Objects/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
