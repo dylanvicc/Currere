@@ -1,5 +1,6 @@
 .scrollable-feed {
+  height: 100vh;
   min-height: 600px;
-  max-height: 600px;
+  max-height: 1200px;
   background-color: white;
 }

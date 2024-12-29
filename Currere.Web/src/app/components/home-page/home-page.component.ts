@@ -15,6 +15,8 @@ export class HomePageComponent implements OnInit {
 
   public posts: Post[] = [];
 
+  public search: string = "";
+
   constructor(
     private postsService: PostsService) { }
 

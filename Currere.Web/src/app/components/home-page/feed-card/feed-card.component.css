@@ -1,0 +1,7 @@
+.feed-card {
+    cursor: pointer;
+}
+
+  .feed-card:hover {
+    background-color: #f7f7f7;
+  }
