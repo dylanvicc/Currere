@@ -10,6 +10,8 @@ namespace Currere.Service.Posts.Services
 
         Task<Post?> FindAsync(int identity);
 
+        Task<Post?> FindForUserAsync(int identity);
+
         Task<bool> DeleteAsync(int identity);
     }
 }
