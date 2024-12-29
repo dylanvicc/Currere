@@ -9,5 +9,7 @@ namespace Currere.Service.Posts.Services
         Task<Post[]> FindAsync();
 
         Task<Post?> FindAsync(int identity);
+
+        Task<bool> DeleteAsync(int identity);
     }
 }
