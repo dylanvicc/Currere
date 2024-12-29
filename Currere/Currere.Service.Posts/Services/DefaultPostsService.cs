@@ -37,5 +37,10 @@ namespace Currere.Service.Posts.Services
         {
             return await _context.Posts.FindAsync(identity);
         }
+
+        public async Task<Post?> FindForUserAsync(int identity)
+        {
+            return await _context.Posts.FirstOrDefaultAsync(post => post.UserID == identity);
+        }
     }
 }
