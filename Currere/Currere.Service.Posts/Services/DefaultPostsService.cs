@@ -15,6 +15,19 @@ namespace Currere.Service.Posts.Services
             return result == 0 ? null : post;
         }
 
+        public async Task<bool> DeleteAsync(int identity)
+        {
+            var post = await _context.Posts.FindAsync(identity);
+
+            if (post == null)
+                return false;
+
+            _context.Posts.Remove(post);
+            var count = await _context.SaveChangesAsync();
+
+            return count != 0;
+        }
+
         public async Task<Post[]> FindAsync()
         {
             return await _context.Posts.ToArrayAsync();
