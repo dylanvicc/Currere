@@ -1,0 +1,46 @@
+version: '3.9'
+name: currere
+
+services:
+  currere-service-authentication:
+   container_name: currere-service-authentication
+   image: ${DOCKER_REGISTRY-}currereserviceauthentication
+   ports: 
+    - "5000:8080"
+   build:
+      context: .
+      dockerfile: Currere.Service.Authentication/Dockerfile
+   networks: 
+    - default 
+   environment: 
+    - SQL_SERVER=host.docker.internal
+
+  currere-service-posts:
+   container_name: currere-service-posts
+   image: ${DOCKER_REGISTRY-}currereserviceposts
+   ports: 
+    - "5001:8080"
+   build:
+      context: .
+      dockerfile: Currere.Service.Posts/Dockerfile
+   networks: 
+    - default 
+   environment: 
+    - SQL_SERVER=host.docker.internal
+    
+  currere-service-users:
+   container_name: currere-service-users
+   image: ${DOCKER_REGISTRY-}currereserviceusers
+   ports: 
+    - "5002:8080"
+   build:
+      context: .
+      dockerfile: Currere.Service.Users/Dockerfile
+   networks: 
+    - default 
+   environment: 
+    - SQL_SERVER=host.docker.internal
+
+networks:
+  default:
+    driver: bridge

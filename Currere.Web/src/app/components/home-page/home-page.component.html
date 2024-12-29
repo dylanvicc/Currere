@@ -1,0 +1,27 @@
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="card shadow-sm mb-4 p-4">
+        <div class="card-body">
+          <h5 class="card-title mb-3">New Post</h5>
+          <form id="create-post">
+            <div class="mb-3">
+              <input class="form-control" type="text" placeholder="Title" [(ngModel)]="title" name="title" />
+            </div>
+            <div class="mb-3">
+              <textarea class="form-control" placeholder="Body" rows="5" [(ngModel)]="body" name="body"></textarea>
+            </div>
+            <button class="btn btn-primary mt-2 float-end" [disabled]="!title.length || !body.length" (click)="create()">Create Post</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-8">
+      <div class="overflow-auto shadow-sm scrollable-feed border rounded p-3 mb-4">
+        <div *ngFor="let post of posts" class="mb-3">
+          <app-feed-card [title]="post.title" [text]="post.textContent"></app-feed-card>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

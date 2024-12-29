@@ -1,0 +1,23 @@
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card shadow-sm p-4">
+        <div class="card-body text-center">
+          <h4 class="card-title">Login</h4>
+          <div class="mb-3">
+            <label for="input-email" class="form-label float-start">Email address</label>
+            <input type="email" class="form-control" id="input-email" [(ngModel)]="email">
+          </div>
+          <div class="mb-3">
+            <label for="input-password" class="form-label float-start">Password</label>
+            <input type="password" class="form-control" id="input-password" [(ngModel)]="password">
+          </div>
+          <div *ngIf="error" class="mb-3">
+            <div class="text-danger floart-start">You have entered an invalid email address or password.</div>
+          </div>
+          <button class="btn btn-primary float-end mt-2" [disabled]="!email.length || !password.length" (click)="login()">Login</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\dylan\\source\\repos\\Currere\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{FF085E9E-4726-42C0-9BF5-0A01FFB51288}|Currere.Service.Authentication\\Currere.Service.Authentication.csproj|c:\\users\\dylan\\source\\repos\\currere\\currere.service.authentication\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF085E9E-4726-42C0-9BF5-0A01FFB51288}|Currere.Service.Authentication\\Currere.Service.Authentication.csproj|solutionrelative:currere.service.authentication\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\dylan\\source\\repos\\Currere\\Currere.Service.Authentication\\Program.cs",
+              "RelativeDocumentMoniker": "Currere.Service.Authentication\\Program.cs",
+              "ToolTip": "C:\\Users\\dylan\\source\\repos\\Currere\\Currere.Service.Authentication\\Program.cs",
+              "RelativeToolTip": "Currere.Service.Authentication\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-29T17:19:50.913Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
