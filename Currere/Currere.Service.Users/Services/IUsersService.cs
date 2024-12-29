@@ -10,6 +10,8 @@ namespace Currere.Service.Users.Services
 
         Task<User?> FindAsync(string email);
 
+        Task<bool> DeleteAsync(int identity);
+
         Task<User?> CreateAsync(User user);
     }
 }
