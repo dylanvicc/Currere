@@ -48,13 +48,16 @@ namespace Currere.Service.Users.Controllers
             if (ModelState.IsValid == false)
                 return BadRequest(ModelState);
 
+            if (await _service.FindAsync(user.EmailAddress) is not null)
+                return BadRequest("This email address is already registered.");
+
             var result = await _service.CreateAsync(new User
             {
                 FirstName = user.FirstName,
                 LastName = user.LastName,
                 EmailAddress = user.EmailAddress,
                 Password = user.Password,
-                RoleID = user.RoleID,
+                RoleID = 1,
                 Locked = false,
                 LastLoginDateUTC = DateTime.UtcNow,
                 RegistrationDateUTC = DateTime.UtcNow

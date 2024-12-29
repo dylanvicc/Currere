@@ -1,0 +1,38 @@
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card p-4">
+        <div class="card-body">
+          <h4 class="card-title mb-4 text-center">Register Account</h4>
+          <form>
+            <div class="mb-4">
+              <label for="email" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="email" placeholder="Email Address" [(ngModel)]="email" name="email">
+            </div>
+            <div class="mb-4">
+              <label for="first-name" class="form-label">First Name</label>
+              <input type="text" class="form-control" id="first-name" placeholder="First Name" [(ngModel)]="firstName" name="firstName">
+            </div>
+            <div class="mb-4">
+              <label for="last-name" class="form-label">Last Name</label>
+              <input type="text" class="form-control" id="last-name" placeholder="Last Name" [(ngModel)]="lastName" name="lastName">
+            </div>
+            <div class="mb-4">
+              <label for="password" class="form-label">Password</label>
+              <input type="password" class="form-control" id="password" placeholder="Password" [(ngModel)]="password" name="password">
+            </div>
+            <div class="mb-4">
+              <label for="confirm-password" class="form-label">Confirm Password</label>
+              <input type="password" class="form-control" id="confirm-password" placeholder="Confirm Password" [(ngModel)]="passwordConfirmation" name="passwordConfirmation">
+            </div>
+            <div *ngIf="!passwordsMatch()" class="mb-4">
+              <p class="text-danger text-center">The passwords you entered do not match</p>
+            </div>
+            <button type="submit" class="btn btn-primary w-100 mt-2" (click)="register()" [disabled]="registerDisabled() || !passwordsMatch()">Register</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

@@ -18,6 +18,12 @@ namespace Currere.Service.Users.Services
             return await _context.Users.FirstOrDefaultAsync(
                 user => user.EmailAddress == email && user.Password == _service.Hash(password, HashType.SHA256));
         }
+
+        public async Task<User?> FindAsync(string email)
+        {
+            return await _context.Users.FirstOrDefaultAsync(user => user.EmailAddress == email);
+        }
+
         public async Task<User?> CreateAsync(User user)
         {
             user.Password = _service.Hash(user.Password, HashType.SHA256);

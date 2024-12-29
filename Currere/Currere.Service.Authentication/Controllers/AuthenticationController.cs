@@ -18,6 +18,7 @@ namespace Currere.Service.Authentication.Controllers
 
         [HttpPost, Route("authenticate")]
         [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> AuthenticateAsync(
             [FromBody] LoginCredentials credentials)

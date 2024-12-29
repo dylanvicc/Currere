@@ -6,10 +6,11 @@ import { LoginPageComponent } from './components/login-page/login-page.component
 import { HomePageComponent } from './components/home-page/home-page.component';
 import { NavigationBarComponent } from './components/navigation-bar/navigation-bar.component';
 import { FeedCardComponent } from './components/home-page/feed-card/feed-card.component';
-import { HTTP_INTERCEPTORS, HttpClientModule, provideHttpClient } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { LogoutPageComponent } from './components/logout-page/logout-page.component';
 import { JwtInterceptorService } from './services/auth/jwt-interceptor.service';
+import { RegisterPageComponent } from './components/register-page/register-page.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { JwtInterceptorService } from './services/auth/jwt-interceptor.service';
     HomePageComponent,
     NavigationBarComponent,
     FeedCardComponent,
-    LogoutPageComponent
+    LogoutPageComponent,
+    RegisterPageComponent
   ],
   imports: [
     FormsModule,

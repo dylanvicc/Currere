@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Currere.Shared.Objects\Currere.Shared.Objects.csproj" />
+    <ProjectReference Include="..\Currere.Shared.Objects\Currere.Shared.Objects.csproj" />
   </ItemGroup>
 
 </Project>

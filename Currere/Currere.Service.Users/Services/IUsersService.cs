@@ -8,6 +8,8 @@ namespace Currere.Service.Users.Services
 
         Task<User?> FindAsync(string email, string password);
 
+        Task<User?> FindAsync(string email);
+
         Task<User?> CreateAsync(User user);
     }
 }

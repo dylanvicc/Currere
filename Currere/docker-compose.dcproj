@@ -10,9 +10,6 @@
     <DockerServiceName>currere.service.authentication</DockerServiceName>
   </PropertyGroup>
   <ItemGroup>
-    <None Include="..\Currere.Web\src\app\AppModule.ts">
-      <Link>AppModule.ts</Link>
-    </None>
     <None Include="docker-compose.override.yml">
       <DependentUpon>docker-compose.yml</DependentUpon>
     </None>

@@ -4,9 +4,11 @@ import { LoginPageComponent } from './components/login-page/login-page.component
 import { HomePageComponent } from './components/home-page/home-page.component';
 import { LogoutPageComponent } from './components/logout-page/logout-page.component';
 import { AuthGuard } from './guard/auth.guard';
+import { RegisterPageComponent } from './components/register-page/register-page.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginPageComponent },
+  { path: 'register', component: RegisterPageComponent },
   { path: 'logout', component: LogoutPageComponent, canActivate: [AuthGuard] },
   { path: 'home', component: HomePageComponent, canActivate: [AuthGuard] },
   { path: '', redirectTo: '/login', pathMatch: 'full' }

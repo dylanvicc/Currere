@@ -16,8 +16,5 @@ namespace Currere.Service.Users.Model
 
         [Required]
         public string Password { get; set; } = string.Empty;
-
-        [Required]
-        public int RoleID { get; set; }
     }
 }
