@@ -33,5 +33,18 @@ namespace Currere.Service.Users.Services
 
             return result == 0 ? null : user;
         }
+
+        public async Task<bool> DeleteAsync(int identity)
+        {
+            var user = await _context.Users.FindAsync(identity);
+
+            if (user == null)
+                return false;
+
+            _context.Users.Remove(user);
+            var count = await _context.SaveChangesAsync();
+
+            return count != 0;
+        }
     }
 }
