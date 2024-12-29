@@ -1,0 +1,1 @@
+A social media bulletin board developed in Angular with a containerized .NET core microservice architecture on the backend. Local development will require the docker engine and a suitable database connection.
