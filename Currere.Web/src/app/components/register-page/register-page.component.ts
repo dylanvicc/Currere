@@ -17,6 +17,8 @@ export class RegisterPageComponent {
   public password: string = "";
   public passwordConfirmation: string = "";
 
+  public error: boolean = false;
+
   constructor(
     private userService: UsersService,
     private router: Router) { }
@@ -30,6 +32,9 @@ export class RegisterPageComponent {
     } as User).subscribe({
       next: () => {
         this.router.navigate(['/login']);
+      },
+      error: () => {
+        this.error = true;
       }
     });
   }
