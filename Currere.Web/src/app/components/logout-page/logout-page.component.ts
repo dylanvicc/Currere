@@ -4,11 +4,12 @@ import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-logout-page',
-  standalone: false,  
+  standalone: false,
   templateUrl: './logout-page.component.html',
   styleUrl: './logout-page.component.css'
 })
 export class LogoutPageComponent {
+
   constructor(
     public authService: AuthenticationService,
     private router: Router) { }
